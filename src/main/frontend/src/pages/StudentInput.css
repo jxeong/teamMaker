@@ -1,0 +1,62 @@
+/* src/pages/StudentInput.css */
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Pretendard', sans-serif;
+}
+
+.student-input-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem 1.8rem;
+  min-height: 100vh;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.1rem;
+}
+
+input {
+  padding: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: 'Pretendard', sans-serif;
+}
+
+input::placeholder {
+  color: #bbb;
+}
+
+button {
+  background-color: #6c7aa1;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 1rem;
+}

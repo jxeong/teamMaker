@@ -1,0 +1,91 @@
+/* src/pages/GroupStatusEnter.css */
+
+.status-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.status-content {
+  text-align: center;
+  width: 90%;
+  max-width: 300px;
+  padding: 1.5rem 1rem;
+  font-family: 'Pretendard', sans-serif;
+  background-color: white;
+}
+
+.status-page h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  color: #7996C5;
+  line-height: 2.7rem;
+}
+
+.status-page p {
+  font-size: 0.95rem;
+  color: #7996C5;
+  margin-bottom: 1.8rem;
+  text-align: center;
+}
+
+.status-page form {
+  width: 100%;
+  max-width: 380px;
+  text-align: left;
+}
+
+.status-page label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #555;
+  display: block;
+  margin-bottom: 0rem;
+}
+
+.status-page input[type="text"] {
+  width: 100%;
+  padding: 0.9rem;
+  border: 2px solid #7996C5;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #ffffff;
+  margin-bottom: 0rem;
+  outline: none;
+}
+
+.btn-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.btn-row button {
+  flex: 1;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn-row button:active {
+  transform: scale(0.97);
+}
+
+.btn-row button:first-child {
+  background-color: white;
+  color: #7996C5;
+  border: 2px solid #7996C5;
+}
+
+.btn-row button:last-child {
+  background-color: #7996C5;
+  color: white;
+  border: none;
+}
