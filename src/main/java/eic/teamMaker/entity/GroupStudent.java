@@ -18,6 +18,7 @@ public class GroupStudent {
     private String studentName;
     private String phoneNumber;
     private String mbti;
+    private String role_type;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "group_id")

@@ -33,6 +33,7 @@ public class StudentController {
         groupStudent.setStudentName(studentRequest.getStudentName());
         groupStudent.setPhoneNumber(studentRequest.getPhoneNumber());
         groupStudent.setMbti(studentRequest.getMbti());
+        groupStudent.setRole_type(studentRequest.getRole_type());
         groupStudent.setGroupInfo(groupInfo); // groupId 연결!
 
         return groupStudentRepository.save(groupStudent);

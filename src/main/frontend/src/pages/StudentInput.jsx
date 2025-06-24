@@ -13,6 +13,7 @@ export default function StudentInput() {
     name: '',
     phoneNumber: '',
     mbti: '',
+    role_type: '',
     // 교수자가 추가한 항목이 있다면 여기에 더 추가 가능
   });
 
@@ -50,6 +51,7 @@ export default function StudentInput() {
         studentName: studentInfo.name,
         phoneNumber: studentInfo.phoneNumber,
         mbti: studentInfo.mbti,
+        role_type: studentInfo.role_type,
         groupCode: groupCode, // 입력했던 그룹코드 같이 전송
       });
 
@@ -108,6 +110,45 @@ export default function StudentInput() {
             placeholder="MBTI를 입력하세요 (예: INFP)"
             required
           />
+
+          <label>팀 프로젝트 타입</label>
+
+          <div>
+            <input
+              type="radio"
+              id="leader"
+              name="role_type"
+              value="LEADER"
+              checked={studentInfo.role_type === 'LEADER'}
+              onChange={handleStudentChange}
+            />
+            <label htmlFor="leader">리더</label>
+          </div>
+
+          <div>
+            <input
+              type="radio"
+              id="follower"
+              name="role_type"
+              value="FOLLOWER"
+              checked={studentInfo.role_type === 'FOLLOWER'}
+              onChange={handleStudentChange}
+            />
+            <label htmlFor="follower">팔로워</label>
+          </div>
+
+          <div>
+            <input
+              type="radio"
+              id="flexible"
+              name="role_type"
+              value="FLEXIBLE"
+              checked={studentInfo.role_type === 'FLEXIBLE'}
+              onChange={handleStudentChange}
+            />
+            <label htmlFor="flexible">둘 다 가능</label>
+          </div>
+
 
           {/* 필요하면 여기에 추가 입력 항목 */}
 

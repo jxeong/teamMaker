@@ -9,5 +9,6 @@ public class StudentRequest {
     private String studentName;
     private String phoneNumber;
     private String mbti;
+    private String role_type;
     private String groupCode; // 입력받은 그룹코드
 }
