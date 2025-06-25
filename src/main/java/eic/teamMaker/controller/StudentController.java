@@ -8,6 +8,8 @@ import eic.teamMaker.repository.GroupStudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/student")
 @CrossOrigin(origins = "http://localhost:3000")
@@ -46,6 +48,16 @@ public class StudentController {
             throw new IllegalArgumentException("그룹 코드가 유효하지 않습니다.");
         }
         return groupStudentRepository.countByGroupInfo(group);
+    }
+
+    @GetMapping("/list/{groupCode}")
+    public List<GroupStudent> getStudentsByGroupCode(@PathVariable String groupCode) {
+        GroupInfo group = groupInfoRepository.findByGroupCode(groupCode);
+        if (group == null) {
+            throw new IllegalArgumentException("그룹 코드가 유효하지 않습니다.");
+        }
+
+        return groupStudentRepository.findByGroupInfo(group);
     }
 
 }

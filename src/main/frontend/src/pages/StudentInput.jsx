@@ -56,6 +56,7 @@ export default function StudentInput() {
       });
 
       console.log('학생 등록 성공:', response.data);
+      alert('등록이 완료되었습니다.');
       navigate('/status'); // 등록 완료 후 그룹 현황 페이지로 이동
     } catch (error) {
       console.error('학생 등록 실패:', error);

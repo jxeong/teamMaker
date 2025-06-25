@@ -1,9 +1,13 @@
 package eic.teamMaker.controller;
 
+import eic.teamMaker.dto.AuthRequest;
 import eic.teamMaker.entity.GroupInfo;
 import eic.teamMaker.repository.GroupInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/group")
@@ -26,6 +30,20 @@ public class GroupController {
         }
 
         return groupInfo;
+    }
+
+    @PostMapping("/auth")
+    public Map<String, Boolean> authenticateGroup(@RequestBody AuthRequest request) {
+        GroupInfo groupInfo = groupInfoRepository.findByGroupCode(request.getGroupCode());
+
+        Map<String, Boolean> response = new HashMap<>();
+        if (groupInfo != null && groupInfo.getGroupPassword().equals(request.getPassword())) {
+            response.put("authenticated", true);
+        } else {
+            response.put("authenticated", false);
+        }
+
+        return response;
     }
 
 }

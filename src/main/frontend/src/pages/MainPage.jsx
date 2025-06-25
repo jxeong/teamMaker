@@ -19,6 +19,7 @@ export default function MainPage() {
         <button onClick={() => navigate('/create')}>팀 프로젝트를 위한 그룹 생성하기</button>
         <button onClick={() => navigate('/input')}>생성된 그룹에 내 정보 입력하기</button>
         <button onClick={() => navigate('/status')}>그룹 현황 보러가기</button>
+        <button onClick={() => navigate('/manage')}>내 그룹 관리하기</button>
       </div>
       {/*<p>{data}</p>  이렇게 수정: 받아온 data 출력 */}
     </div>

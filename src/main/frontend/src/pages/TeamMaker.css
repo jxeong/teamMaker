@@ -1,0 +1,17 @@
+/* src/pages/TeamMaker.css */
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Pretendard', sans-serif;
+}
+
+.team-maker-container {
+  max-width: 400px;
+  margin: 0px auto;
+  padding: 2rem 1.8rem;
+}

@@ -1,0 +1,73 @@
+/* src/pages/ManageGroup.css */
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Pretendard', sans-serif;
+}
+
+.manage-group-container {
+  max-width: 400px;
+  margin: 0px auto;
+  padding: 2rem 1.8rem;
+}
+
+.auth-form,
+.student-list-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form h2,
+.student-list-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth-form label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.auth-form input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  padding: 12px;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.student-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.student-item {
+  padding: 15px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #ffffff;
+}

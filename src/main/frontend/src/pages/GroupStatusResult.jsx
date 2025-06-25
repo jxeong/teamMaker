@@ -57,7 +57,12 @@ export default function GroupStatusResult() {
             </p>
           </div>
 
-          <button onClick={() => navigate('/manage')}>내가 만든 그룹 관리하기</button>
+          {participantCount === group.totalStudents && (
+                <p className="complete-message">모든 팀원 정보 입력이 완료되었습니다.
+                <br/> 팀 구성을 기다려주세요!</p>
+              )}
+
+{/*           <button onClick={() => navigate('/manage')}>내가 만든 그룹 관리하기</button> */}
           <button onClick={() => navigate('/')}>메인 페이지로 돌아가기</button>
         </>
       )}
