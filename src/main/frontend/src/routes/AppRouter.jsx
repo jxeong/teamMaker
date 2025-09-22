@@ -14,19 +14,19 @@ import TeamResult from '../pages/TeamResult';
 
 export default function AppRouter() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/create" element={<CreateGroup />} />
-        <Route path="/input" element={<StudentInput />} />
-        <Route path="/select-info" element={<SelectInfo />} />
-        <Route path="/group-created" element={<GroupCreated />} />
-        <Route path="/status" element={<GroupStatusEnter />} />
-        <Route path="/status/result" element={<GroupStatusResult />} />
-        <Route path="/manage" element={<ManageGroup />} />
-        <Route path="/team-maker" element={<TeamMaker />} />
-        <Route path="/team-result" element={<TeamResult />} />
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/create" element={<CreateGroup />} />
+          <Route path="/input" element={<StudentInput />} />
+          <Route path="/select-info" element={<SelectInfo />} />
+          <Route path="/group-created" element={<GroupCreated />} />
+          <Route path="/status" element={<GroupStatusEnter />} />
+          <Route path="/status/result" element={<GroupStatusResult />} />
+          <Route path="/manage" element={<ManageGroup />} />
+          <Route path="/team-maker" element={<TeamMaker />} />
+          <Route path="/team-result" element={<TeamResult />} />
+        </Routes>
+      </BrowserRouter>
   );
 }

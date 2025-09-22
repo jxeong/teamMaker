@@ -66,45 +66,45 @@ export default function TeamMaker() {
   };
 
   return (
-    <div className="team-maker-container">
-      <h2>팀 구성 도우미</h2>
-      {groupInfo && (
-        <>
-          <p>과목명: {groupInfo.courseName}</p>
-          <p>총 인원: {groupInfo.totalStudents}</p>
-          <p>팀당 인원: {groupInfo.studentsPerTeam}</p>
-        </>
-      )}
+      <div className="team-maker-container">
+        <h2>팀 구성 도우미</h2>
+        {groupInfo && (
+            <>
+              <p>과목명: {groupInfo.courseName}</p>
+              <p>총 인원: {groupInfo.totalStudents}</p>
+              <p>팀당 인원: {groupInfo.studentsPerTeam}</p>
+            </>
+        )}
 
-      <h3>학생 목록</h3>
-      <ul>
-        {studentList.map((s, i) => (
-          <li key={i}>
-            {s.studentName} - {s.mbti} - {s.role_type}
-          </li>
-        ))}
-      </ul>
-
-      <button onClick={handleTeamMaking}>팀 구성 실행</button>
-      <button onClick={() => navigate(-1)}>돌아가기</button>
-
-      {teamResult && (
-        <>
-          <h3>팀 구성 결과</h3>
-          {teamResult.map((team, i) => (
-            <div key={i}>
-              <h4>팀 {i + 1}</h4>
-              <ul>
-                {team.map((member, j) => (
-                  <li key={j}>
-                    {member.studentName} - {member.mbti} - {member.role_type}
-                  </li>
-                ))}
-              </ul>
-            </div>
+        <h3>학생 목록</h3>
+        <ul>
+          {studentList.map((s, i) => (
+              <li key={i}>
+                {s.studentName} - {s.mbti} - {s.role_type}
+              </li>
           ))}
-        </>
-      )}
-    </div>
+        </ul>
+
+        <button onClick={handleTeamMaking}>팀 구성 실행</button>
+        <button onClick={() => navigate(-1)}>돌아가기</button>
+
+        {teamResult && (
+            <>
+              <h3>팀 구성 결과</h3>
+              {teamResult.map((team, i) => (
+                  <div key={i}>
+                    <h4>팀 {i + 1}</h4>
+                    <ul>
+                      {team.map((member, j) => (
+                          <li key={j}>
+                            {member.studentName} - {member.mbti} - {member.role_type}
+                          </li>
+                      ))}
+                    </ul>
+                  </div>
+              ))}
+            </>
+        )}
+      </div>
   );
 }
