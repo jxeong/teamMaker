@@ -77,6 +77,7 @@ export default function StudentInput() {
             required
           />
           <button type="submit">다음</button>
+          <button onClick={() => navigate(-1)}>돌아가기</button>
         </form>
       ) : (
         <form onSubmit={handleStudentSubmit} className="student-info-form">

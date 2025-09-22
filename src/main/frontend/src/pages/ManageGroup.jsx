@@ -68,6 +68,7 @@ export default function ManageGroup() {
           {errorMessage && <p className="error-message">{errorMessage}</p>}
 
           <button type="submit">접속하기</button>
+          <button onClick={() => navigate(-1)}>돌아가기</button>
         </form>
       ) : (
         <div className="student-list-section">

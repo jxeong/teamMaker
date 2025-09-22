@@ -119,6 +119,7 @@ export default function CreateGroup() {
         />
 
         <button type="submit">다음</button>
+        <button onClick={() => navigate(-1)}>돌아가기</button>
       </form>
     </div>
   );

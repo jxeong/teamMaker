@@ -9,6 +9,7 @@ import GroupStatusEnter from '../pages/GroupStatusEnter';
 import GroupStatusResult from '../pages/GroupStatusResult';
 import ManageGroup from '../pages/ManageGroup';
 import TeamMaker from '../pages/TeamMaker';
+import TeamResult from '../pages/TeamResult';
 
 
 export default function AppRouter() {
@@ -24,6 +25,7 @@ export default function AppRouter() {
         <Route path="/status/result" element={<GroupStatusResult />} />
         <Route path="/manage" element={<ManageGroup />} />
         <Route path="/team-maker" element={<TeamMaker />} />
+        <Route path="/team-result" element={<TeamResult />} />
       </Routes>
     </BrowserRouter>
   );

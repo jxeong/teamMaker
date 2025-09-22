@@ -1,0 +1,17 @@
+/* src/pages/TeamResult.css */
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Pretendard', sans-serif;
+}
+
+.team-result-container {
+  max-width: 400px;
+  margin: 0px auto;
+  padding: 2rem 1.8rem;
+}

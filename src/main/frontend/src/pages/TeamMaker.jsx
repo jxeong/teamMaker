@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import './TeamMaker.css';
@@ -6,7 +6,7 @@ import './TeamMaker.css';
 export default function TeamMaker() {
   const location = useLocation();
   const { groupCode } = location.state;
-
+  const navigate = useNavigate();
   const [groupInfo, setGroupInfo] = useState(null);
   const [studentList, setStudentList] = useState([]);
   const [teamResult, setTeamResult] = useState(null);  // 팀 결과 저장
@@ -55,9 +55,13 @@ export default function TeamMaker() {
       const res = await axios.post('http://localhost:8000/cluster/make-teams', requestData);
       setTeamResult(res.data.teams);
       alert('팀 구성 완료!');
+      navigate('/team-result', { state: { groupCode, teams: res.data.teams } });
     } catch (err) {
       console.error('팀 구성 실패:', err);
       alert('팀 구성 중 오류가 발생했습니다.');
+
+      // 실패하더라도 에러 메시지와 함께 이동
+      navigate('/team-result', { state: { groupCode, teams: null, error: '팀 구성 중 오류가 발생했습니다.' } });
     }
   };
 
@@ -82,6 +86,7 @@ export default function TeamMaker() {
       </ul>
 
       <button onClick={handleTeamMaking}>팀 구성 실행</button>
+      <button onClick={() => navigate(-1)}>돌아가기</button>
 
       {teamResult && (
         <>
