@@ -31,6 +31,7 @@ React + Spring Boot + Genetic Algorithm 기반의 **웹 플랫폼 팀 빌더**
 ```bash
 cd backend
 ./gradlew bootRun
+```
 
 ### 2) Frontend (React)
 ```bash
